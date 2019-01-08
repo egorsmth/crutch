@@ -1,12 +1,16 @@
 CC		:= g++
 C_FLAGS := -std=c++17 -Wall -Wextra
 
+CRUTCH := /home/matt/dev/engine/engine/
+
 BIN		:= bin
 SRC		:= src
-INCLUDE	:= /home/matt/dev/engine/engine/src/
+INCLUDE	:= $(CRUTCH)src/
+INCLUDE2 := $(CRUTCH)vandor/spdlog/include/
 LIB		:= lib
 
-LIBRARIES	:= /home/matt/dev/engine/engine/bin/Crutch.o
+
+LIBRARIES	:= $(CRUTCH)bin/Application.o $(CRUTCH)bin/Log.o
 
 ifeq ($(OS),Windows_NT)
 EXECUTABLE	:= main.exe
@@ -23,4 +27,4 @@ run: all
 	./$(BIN)/$(EXECUTABLE)
 
 $(BIN)/$(EXECUTABLE): $(SRC)/*
-	$(CC) $(C_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
+	$(CC) $(C_FLAGS) -I$(INCLUDE) -I$(INCLUDE2) -L$(LIB) $^ -o $@ $(LIBRARIES)

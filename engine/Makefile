@@ -3,11 +3,14 @@ C_FLAGS := -std=c++17 -Wall -Wextra -fPIC -c
 
 BIN		:= bin
 SRC		:= src
-INCLUDE	:= include
+INCLUDE	:= vandor/spdlog/include/
 LIB		:= lib
+CORE    := src/core/
 
 LIBRARIES	:=
 
+SH_APP = Application
+SH_LOG = Log
 ifeq ($(OS),Windows_NT)
 EXECUTABLE	:= Crutch
 else
@@ -20,7 +23,8 @@ endif
 # 	$(RM) $(BIN)/$(EXECUTABLE)
 
 run:
-	$(CC) $(C_FLAGS) $(SRC)/core/Application.cpp -o $(BIN)/$(EXECUTABLE).o
+	$(CC) $(C_FLAGS) -I$(INCLUDE) $(CORE)$(SH_APP).cpp -o $(BIN)/$(SH_APP).o
+	$(CC) $(C_FLAGS) -I$(INCLUDE)  $(CORE)$(SH_LOG).cpp -o $(BIN)/$(SH_LOG).o
 
 # $(BIN)/$(EXECUTABLE): $(SRC)/*
 # 	$(CC) $(C_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)

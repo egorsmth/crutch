@@ -1,0 +1,3 @@
+[submodule "engine/vandor/spdlog"]
+	path = engine/vandor/spdlog
+	url = https://github.com/gabime/spdlog
