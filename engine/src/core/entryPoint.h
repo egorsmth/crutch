@@ -9,6 +9,9 @@ int main(int argc, char const *argv[])
     LOG_ERROR("err");
     LOG_INFO("err");
     LOG_DEBUG("err");
+    LOG_CORE_ERROR("err");
+    LOG_CORE_INFO("err");
+    LOG_CORE_DEBUG("err");
 
     printf("suck\n");
     auto app = Crutch::CreateApplication();
