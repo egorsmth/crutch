@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Crutch {
     class HAZEL_API KeyEvent : public Event {
         public:

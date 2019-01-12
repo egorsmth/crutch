@@ -1,5 +1,7 @@
 #pragma once
 
+#include "pcl.h"
+
 extern Crutch::Application* Crutch::CreateApplication();
 
 int main(int argc, char const *argv[])

@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Crutch {
     class HAZEL_API MouseMovedEvent : public Event {
         public:

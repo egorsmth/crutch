@@ -1,9 +1,8 @@
 #pragma once
 
-#include "../Core.h"
+#include "../pcl.h"
 
-#include <string>
-#include <functional>
+#include "../Core.h"
 
 namespace Crutch {
     enum class EventType {
