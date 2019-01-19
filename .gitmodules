@@ -1,3 +1,6 @@
 [submodule "engine/vandor/spdlog"]
 	path = engine/vandor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "engine/vandor/glfw"]
+	path = engine/vandor/glfw
+	url = https://github.com/glfw/glfw

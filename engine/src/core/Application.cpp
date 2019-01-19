@@ -4,15 +4,13 @@
 #include "Log.h"
 
 namespace Crutch {
-    Application::Application() {}
+    Application::Application() {
+        m_Window = std::unique_ptr<Window>(Window::Create());
+    }
     Application::~Application() {}
-    void Application::run() {
-        WindowResizeEvent e(320, 640);
-        if (e.IsInCategory(CategoryApp)) {
-            LOG_CORE_DEBUG(e);    
+    void Application::run() {      
+        while (m_Running) {
+            m_Window->OnUpdate();
         }
-        LOG_CORE_DEBUG(e);
-        
-        while (true);
     }
 }

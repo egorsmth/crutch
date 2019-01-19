@@ -7,8 +7,9 @@ BIN		:= bin
 SRC		:= src
 INCLUDE	:= $(CRUTCH)src/
 INCLUDE2 := $(CRUTCH)vandor/spdlog/include/
-LIB		:= lib
+INCLUDE3 := $(CRUTCH)vandor/glfw/include/
 
+LIB		:= lib
 
 LIBRARIES	:= $(CRUTCH)bin/Application.o $(CRUTCH)bin/Log.o
 
