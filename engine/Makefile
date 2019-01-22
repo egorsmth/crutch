@@ -1,12 +1,12 @@
 CC		:= g++
-C_FLAGS := -std=c++17 -Wall -Wextra -fPIC
+C_FLAGS := -std=c++17 -Wall -Wextra -fPIC -c
 
 BIN		:= bin
 SRC		:= src
 INCLUDE	:= vandor/spdlog/include/
-INCLUDE2	:= /usr/local/include/
+INCLUDE2 := vandor/glfw/include/
 
-LIB		:= /usr/local/lib  -lGL -lGLU -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi
+LIB		:= lib
 CORE    := src/core/
 PLATFORM    := src/platform/linux/
 
@@ -27,9 +27,12 @@ endif
 # 	$(RM) $(BIN)/$(EXECUTABLE)
 
 run:
-	$(CC) $(C_FLAGS) -I$(INCLUDE) -I$(INCLUDE2) -L$(LIB) $(CORE)$(SH_LOG).cpp $(PLATFORM)$(SH_WINDOW).cpp  $(CORE)$(SH_APP).cpp -o $(BIN)/$(SH_APP).o
-	# $(CC) $(C_FLAGS) -I$(INCLUDE) $(CORE)$(SH_LOG).cpp -o $(BIN)/$(SH_LOG).o
-	# $(CC) $(C_FLAGS) -I$(INCLUDE) -I$(INCLUDE2) -L$(LIB) $(PLATFORM)$(SH_WINDOW).cpp -o $(BIN)/$(SH_WINDOW).o
+	$(CC) $(C_FLAGS) -I$(INCLUDE) $(CORE)$(SH_APP).cpp -o $(BIN)/$(SH_APP).o
+	$(CC) $(C_FLAGS) -I$(INCLUDE) $(CORE)$(SH_LOG).cpp -o $(BIN)/$(SH_LOG).o
+	$(CC) $(C_FLAGS) -I$(INCLUDE) -I$(INCLUDE2) $(PLATFORM)$(SH_WINDOW).cpp -o $(BIN)/$(SH_WINDOW).o
+
+
+# $(CC) $(C_FLAGS) -I$(INCLUDE) -I$(INCLUDE2) -L$(LIB) $(PLATFORM)$(SH_WINDOW).cpp -o $(BIN)/$(SH_WINDOW).o
 
 # $(BIN)/$(EXECUTABLE): $(SRC)/*
 # 	$(CC) $(C_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)

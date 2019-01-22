@@ -11,7 +11,7 @@ INCLUDE3 := $(CRUTCH)vandor/glfw/include/
 
 LIB		:= lib
 
-LIBRARIES	:= $(CRUTCH)bin/Application.o $(CRUTCH)bin/Log.o
+LIBRARIES	:= $(CRUTCH)bin/Application.o $(CRUTCH)bin/Log.o $(CRUTCH)bin/WindowLinux.o
 
 ifeq ($(OS),Windows_NT)
 EXECUTABLE	:= main.exe
@@ -28,4 +28,4 @@ run: all
 	./$(BIN)/$(EXECUTABLE)
 
 $(BIN)/$(EXECUTABLE): $(SRC)/*
-	$(CC) $(C_FLAGS) -I$(INCLUDE) -I$(INCLUDE2) -L$(LIB) $^ -o $@ $(LIBRARIES)
+	$(CC) $(C_FLAGS) -I$(INCLUDE) -I$(INCLUDE2) -I$(INCLUDE3) -L$(LIB) $^ -o $@ $(LIBRARIES) -pthread -lglfw3 -lGLU -lGL -lXrandr -lXxf86vm -lXi -lXinerama -lX11 -lrt -ldl
