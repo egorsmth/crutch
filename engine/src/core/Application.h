@@ -12,6 +12,8 @@ namespace Crutch {
 
         void run();
 
+        void OnEvent(Event& e);
+
         private:
 
         std::unique_ptr<Window> m_Window;

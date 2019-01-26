@@ -1,6 +1,9 @@
 #include "../../core/pcl.h"
 
 #include "../../core/Log.h"
+#include "../../core/event/ApplicationEvent.h"
+#include "../../core/event/KeyEvent.h"
+#include "../../core/event/MouseEvent.h"
 #include "WindowLinux.h"
 
 namespace Crutch {
@@ -37,6 +40,15 @@ namespace Crutch {
         glfwMakeContextCurrent(m_Window);
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
+
+        // set glfw events
+        glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height){
+            WindowData &data = *(WindowData*)glfwGetWindowUserPointer(window);
+            data.Width = width;
+            data.Height = height;
+            WindowResizeEvent event(width, height);
+            data.EventCallback(event);
+        });
     }
 
     void WindowLinux::Shutdown() {
