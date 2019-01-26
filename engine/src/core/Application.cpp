@@ -12,6 +12,12 @@ namespace Crutch {
     Application::~Application() {}
     void Application::OnEvent(Event& e) {
         LOG_CORE_INFO("{0}", e);
+
+        EventDispatcher dispatcher(e);
+        dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnClose));
+    }
+    bool Application::OnClose(WindowCloseEvent& e) {
+        m_Running = false;
     }
     void Application::run() {      
         while (m_Running) {

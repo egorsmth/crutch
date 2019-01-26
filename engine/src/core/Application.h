@@ -4,6 +4,8 @@
 #include "event/Event.h"
 #include "Window.h"
 
+#include "event/ApplicationEvent.h"
+
 namespace Crutch {
     class HAZEL_API Application {
         public:
@@ -16,6 +18,7 @@ namespace Crutch {
 
         private:
 
+        bool OnClose(WindowCloseEvent& e);
         std::unique_ptr<Window> m_Window;
         bool m_Running = true;
     };
