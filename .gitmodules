@@ -1,0 +1,3 @@
+[submodule "shivaEngine/vendor/spdlog"]
+	path = shivaEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog

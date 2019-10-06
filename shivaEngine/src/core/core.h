@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 #ifdef PLATFORM_WINDOWS
     #ifdef BUILD_DLL
         #define SHIVA_API __declspec(dllexport)
