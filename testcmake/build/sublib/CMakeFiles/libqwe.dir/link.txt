@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblibqwe.a  CMakeFiles/libqwe.dir/libqwe.cpp.o
-/usr/bin/ranlib liblibqwe.a
