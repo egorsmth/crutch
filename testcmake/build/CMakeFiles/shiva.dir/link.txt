@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -Wall   CMakeFiles/shiva.dir/sources/lib1/main.cpp.o CMakeFiles/shiva.dir/sources/lib2/main.cpp.o CMakeFiles/shiva.dir/sources/main.cpp.o  -o shiva /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_filesystem.so /usr/lib/x86_64-linux-gnu/libboost_system.so sublib/liblibqwe.a 

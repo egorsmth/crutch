@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../sublib/libqwe.h
+
+/home/matt/dev/engine/sources/lib1/main.cpp
+iostream
+-
+
+/home/matt/dev/engine/sources/lib2/main.cpp
+iostream
+-
+
+/home/matt/dev/engine/sources/main.cpp
+iostream
+-
+libqwe.h
+/home/matt/dev/engine/sources/libqwe.h
+
