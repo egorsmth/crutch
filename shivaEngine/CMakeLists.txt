@@ -1,8 +1,8 @@
 project(shiva_engine)
 
-set(SOURCES src/test.cpp)
+set(SOURCES src/core/Application.cpp)
 
-set(HEADERS src/test.h)
+set(HEADERS src/shiva.h src/core/core.h src/core/Application.h src/core/EntryPoint.h)
 
 add_library(shiva_engine ${SOURCES} ${HEADERS})
 
