@@ -5,7 +5,11 @@ AUX_SOURCE_DIRECTORY(src/core SOURCES)
 
 set(
     HEADERS
-    
+
+    src/core/events/ApplicationEvent.h 
+    src/core/events/MouseEvent.h 
+    src/core/events/KeyEvent.h 
+    src/core/events/Event.h 
     src/core/core.h 
     src/core/Application.h 
     src/core/Log.h 

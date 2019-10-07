@@ -3,6 +3,7 @@
 #include <memory.h>
 #include "core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Shiva {
     class SHIVA_API Log {

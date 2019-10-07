@@ -1,7 +1,7 @@
 #pragma once
 
 #include "core.h"
-#include "Log.h"
+#include "events/Event.h"
 
 namespace Shiva {
     class SHIVA_API Application {

@@ -11,3 +11,5 @@
 #else
     #define SHIVA_API
 #endif
+
+#define BIT(x) (1 << x)
