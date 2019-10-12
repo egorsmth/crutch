@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Shiva {
     class SHIVA_API MouseMovedEvent : public Event {
         public:

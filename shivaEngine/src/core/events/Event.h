@@ -2,9 +2,6 @@
 
 #include "../core.h"
 
-#include <string>
-#include <functional>
-
 namespace Shiva {
     enum EventType {
         None = 0,
