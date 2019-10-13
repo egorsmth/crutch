@@ -2,6 +2,7 @@ project(shiva_engine)
 
 # set(SOURCES src/core/Application.cpp src/core/Log.cpp)
 AUX_SOURCE_DIRECTORY(src/core SOURCES) 
+AUX_SOURCE_DIRECTORY(src/core/layer SOURCES) 
 
 AUX_SOURCE_DIRECTORY(src/platform/unix SOURCES) 
 
@@ -18,11 +19,16 @@ set(
     src/core/events/ApplicationEvent.h 
     src/core/events/MouseEvent.h 
     src/core/events/KeyEvent.h 
-    src/core/events/Event.h 
+    src/core/events/Event.h
+
+    src/core/layer/Layer.h 
+    src/core/layer/LayerStack.h 
+
     src/core/core.h 
     src/core/Application.h 
     src/core/Log.h 
     src/core/EntryPoint.h 
+
     src/shiva.h
 )
 

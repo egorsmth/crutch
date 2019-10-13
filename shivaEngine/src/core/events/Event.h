@@ -38,6 +38,8 @@ namespace Shiva {
             return GetCategoryFlags() & category;
         }
 
+        virtual bool Handled() const { return m_Handled; }
+
         protected:
         bool m_Handled = false;
     };
