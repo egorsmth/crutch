@@ -42,9 +42,13 @@ add_subdirectory(vendor/GLFW)
 
 target_link_libraries(${PROJECT_NAME} glfw)
 
+add_subdirectory(vendor/GLAD)
+
+target_link_libraries(${PROJECT_NAME} glad)
+
 target_include_directories(shiva_engine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 CMAKE_POLICY(SET CMP0072 NEW)
-find_package(OpenGL REQUIRED) 
+find_package(OpenGL REQUIRED)
 
-target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARY})
+target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARY}) 

@@ -2,6 +2,7 @@
 #include "Application.h"
 #include "Log.h"
 #include "events/ApplicationEvent.h"
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 namespace Shiva {
@@ -20,7 +21,6 @@ namespace Shiva {
     void Application::OnEvent(Event& e) {
         EventDispatcher dispatcher(e);
         dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
-        LOG_CORE_TRACE("{0}", e);
 
         for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); ) {
             (*--it)->OnEvent(e);
