@@ -52,3 +52,7 @@ CMAKE_POLICY(SET CMP0072 NEW)
 find_package(OpenGL REQUIRED)
 
 target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARY}) 
+
+add_subdirectory(vendor/imgui)
+
+target_link_libraries(${PROJECT_NAME} imgui)

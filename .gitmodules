@@ -7,3 +7,6 @@
 [submodule "shivaEngine/vendor/GLAD"]
 	path = shivaEngine/vendor/GLAD
 	url = https://github.com/egorsmth/glad
+[submodule "shivaEngine/vendor/imgui"]
+	path = shivaEngine/vendor/imgui
+	url = https://github.com/ocornut/imgui
