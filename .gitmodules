@@ -9,4 +9,4 @@
 	url = https://github.com/egorsmth/glad
 [submodule "shivaEngine/vendor/imgui"]
 	path = shivaEngine/vendor/imgui
-	url = https://github.com/ocornut/imgui
+	url = https://github.com/egorsmth/imgui
