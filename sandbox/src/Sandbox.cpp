@@ -18,6 +18,7 @@ class Sandbox : public Shiva::Application{
 public:
 Sandbox(){
     PushLayer(new ExampleLayer());
+    PushOverlay(new Shiva::ImGuiLayer());
 }
 
 ~Sandbox(){}
